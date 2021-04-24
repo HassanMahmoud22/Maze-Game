@@ -2,7 +2,8 @@
 using namespace std;
 int i = 2;
 int j = 0;
-char grid[12][12] =
+const int N = 12;
+char grid[N][N] =
       { { '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#' },
 		{ '#', '.', '.', '.', '#', '.', '.', '.', '.', '.','.','#' },
 		{ '.', '.', '#', '.', '#', '.', '#', '#', '#', '#', '.', '#' },
@@ -19,13 +20,14 @@ char grid[12][12] =
 void clear_game()
 {
     grid[2][0] = 'X';
+    grid[5][11] = '.';
 }
 
 void print_grid()
 {
-    for(int i = 0; i < 12; i++)
+    for(int i = 0; i < N; i++)
     {
-        for(int j = 0; j < 12; j++)
+        for(int j = 0; j < N; j++)
         {
             cout << grid[i][j] << " ";
         }
