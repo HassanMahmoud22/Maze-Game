@@ -70,7 +70,8 @@ bool valid_move(int input)
 
 void read_input(int& input)
 {
-    cout << "Enter 8 or 5 or 6 or 4" << endl;
+    cout << "----------------" << endl;
+    cout << "Enter the position" << endl;
     cin >> input;
     while(!valid_move(input))
     {
