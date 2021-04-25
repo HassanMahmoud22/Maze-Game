@@ -65,8 +65,8 @@ def read_input():
     print("----------------")
     print("Enter the position: ", end = ' ')
     c = int(input())
-    while(not valid_move(c)):
-        print("Enter valid number")
+    while(not valid_move(c) or not check_input(c)):
+        print("Enter valid number: ",end = ' ')
         c = int(input())
     return c
 def check_win():
@@ -79,9 +79,6 @@ def play():
     while True:
         print_grid()
         c = read_input()
-        while not valid_move(c):
-            print("you can't move to this direction")
-            c = read_input()
         set_position(c)
         if(check_win()):
             print_grid()
